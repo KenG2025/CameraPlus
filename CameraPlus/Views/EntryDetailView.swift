@@ -30,11 +30,11 @@ struct EntryDetailView: View {
                     photoBox(fileName: entry.afterImage)
                 }
 
-                if entry.note.isEmpty == false {
+                if entry.note?.isEmpty == false {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Note").font(.headline)
 
-                        Text(entry.note)
+                        Text(entry.note!)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding()
                             .overlay(

@@ -6,15 +6,27 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            FeedView()
-            AddEntryView()
-            
+        ZStack{
+            VStack {
+                FeedView()
+                AddEntryView()
+                BeforeAfterDetailView()
+                MainListView()
+            }
+            .padding()
+            .fontWeight(.bold)
         }
-        .padding()
+        .foregroundStyle(.yellow)
+        .background(.gray)
+        
+        
+        
+        
     }
 }
 

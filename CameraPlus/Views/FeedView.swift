@@ -35,8 +35,8 @@ struct FeedView: View {
                             }
                             VStack{
                                 Text(entry.createdAt,style:.date)
-                                if entry.note.isEmpty == false {
-                                    Text(entry.note)
+                                if entry.note!.isEmpty == false {
+                                    Text(entry.note!)
                                         .lineLimit(1)
                                         .foregroundStyle(.secondary)
                                 }

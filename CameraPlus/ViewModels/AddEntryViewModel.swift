@@ -23,6 +23,9 @@ class AddEntryViewModel: ObservableObject{
     @Published var errorMessage: String = ""
     @Published var showError: Bool = false
     
+    @Published var beforeURL: URL?
+    @Published var afterURL: URL?
+    
     let imageStore = ImageFileStore()
     
     
@@ -91,7 +94,9 @@ class AddEntryViewModel: ObservableObject{
             createdAt: Date(),
             note: note,
             beforeImage: beforeName,
-            afterImage: afterName
+            afterImage: afterName,
+            beforeURL: beforeURL,
+            afterURL: afterURL
         )
         
         modelContext.insert(entry)
